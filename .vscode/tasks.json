@@ -1,0 +1,47 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run better-ux",
+      "type": "shell",
+      "command": "npm start",
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/better-ux"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run tree-shaking",
+      "type": "shell",
+      "command": "npm start",
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/tree-shaking"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run blocking-ui",
+      "type": "shell",
+      "command": "http-server",
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/blocking-ui"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run api-server",
+      "type": "shell",
+      "command": "json-server .\\db.json -p 3001",
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/api-server"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

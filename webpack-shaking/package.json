@@ -1,0 +1,21 @@
+{
+  "name": "webpack-shaking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-d": "webpack -d",
+    "build-p": "webpack -p"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "webpack": "^4.44.1",
+    "webpack-bundle-analyzer": "^3.8.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.12"
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blocking UI</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/event-loop.gif" />
+    <p id="clock">[NOW]</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac libero
+      nec turpis aliquet sollicitudin eget vitae elit. Quisque at pretium ante.
+      Etiam mauris dolor, pulvinar eget tortor nec, semper venenatis neque.
+      Maecenas sagittis nibh eget neque dapibus ultricies. Sed non mattis
+      mauris. Nulla nulla turpis, laoreet id luctus sit amet, mattis in lorem.
+      Nam rutrum dictum felis at imperdiet. Suspendisse non finibus sapien, vel
+      condimentum lorem. Sed suscipit tortor sed tellus mattis vulputate.
+      Integer eu pulvinar sapien, eget pellentesque mauris. Vestibulum ante
+      ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+      inceptos himenaeos. Maecenas volutpat in dolor a mattis. Proin imperdiet
+      mauris sed mauris interdum cursus.
+    </p>
+    <button id="runCode">Run Code <span id="counter"></span></button>
+
+    <script src="js/clock.js"></script>
+    <script>
+      const runCode = document.getElementById("runCode");
+      const counter = document.getElementById("counter");
+
+      runCode.addEventListener("click", function () {
+        let i = 0;
+
+        function doIt() {
+          setTimeout(() => {
+            counter.innerText = i++;
+
+            doIt();
+          });
+        }
+
+        doIt();
+      });
+    </script>
+  </body>
+</html>
